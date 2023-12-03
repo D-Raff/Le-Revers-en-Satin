@@ -1,0 +1,1 @@
+// general functionality for home, about and contact page
