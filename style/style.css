@@ -9,91 +9,146 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-align: center;
 }
-:root{
-  font-family: 'Bodoni Moda', serif;
+*::-webkit-scrollbar {
+  display: none;
 }
-#home{
+:root {
+  font-family: "Bodoni Moda", serif;
+}
+#home {
   width: 100vw;
   display: flex;
   justify-content: center;
 }
 
-
 /* navbar */
 
 /* changing size of logo */
-img[alt="logo"]{
+img[alt="logo"] {
   height: 30px;
   aspect-ratio: 1;
   margin-right: 5px;
 }
-.brand{
-  font-family: 'Ephesis', cursive;
+.brand {
+  font-family: "Ephesis", cursive;
   font-weight: bold;
   color: goldenrod !important;
   text-decoration: none;
   font-size: 30px;
 }
-.navbar{
-  font-family: 'Bodoni Moda', serif;
+.navbar {
+  font-family: "Bodoni Moda", serif;
   position: absolute;
 }
-.container-fluid.navbar-fill{
+.container-fluid.navbar-fill {
   display: flex;
   justify-content: space-between;
-  background: #2F2E2E;
+  background: #2f2e2e;
 }
-.navbar a{
-  color: #FBE6A2;
+.navbar a {
+  color: #fbe6a2;
 }
-
-
-
-
 
 /* home contents */
-img[alt="Store-front"]{
+img[alt="Store-front"] {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.welcome-text{
+.welcome-text {
   position: absolute;
   height: 100px;
   width: fit-content;
   text-align: center;
   top: 3.5em;
-  font-family: 'Nanum Myeongjo', serif;
+  font-family: "Nanum Myeongjo", serif;
   font-weight: bold;
   font-size: 5em;
-  color: #FBE6A2;
+  color: #fbe6a2;
   display: flex;
   flex-direction: column;
-  text-shadow: #2F2E2E 3px 3px;
+  text-shadow: #2f2e2e 3px 3px;
+  animation: Float 2s ease-in-out;
+  line-height: 1.5em;
 }
-.name{
-  font-family: 'Ephesis', cursive;
+@keyframes Float {
+  from{line-height: 15em;}
+  to{line-height: 1.5em;}
+}
+.name {
+  font-family: "Ephesis", cursive;
   font-weight: lighter;
   font-size: 10rem;
   color: rgb(207, 180, 27);
 }
 
 /* footer */
-footer{
+footer {
   height: 100px;
-  background:#2F2E2E;
+  background: #2f2e2e;
   font-size: 2em;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #FBE6A2;
+  color: #fbe6a2;
 }
-.name-2{
-  font-family: 'Ephesis', cursive;
+.name-2 {
+  font-family: "Ephesis", cursive;
   font-weight: lighter;
   color: rgb(207, 180, 27);
 }
+
+/* About page */
+#About {
+  height: 100vh;
+  width: 100vw;
+  background: #112f21;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fbe6a2;
+  justify-content: space-evenly;
+}
+.about-info {
+  border: 3px solid;
+  border-radius: 20px;
+  text-align: center;
+  font-family: "Nanum Myeongjo", serif;
+  font-style:oblique;
+}
+.name-3 {
+  font-weight: bold;
+  font-family: 'Italiana', sans-serif;
+}
+.services{
+  border:  3px solid;
+  border-radius: 20px;
+  height: 30em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.service{
+  border: 3px solid;
+  width: 30%;
+  height: 20em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  border-radius: 20px;
+}
+.service img{
+  height: 50%;
+  width: 80%;
+  object-fit: cover;
+}
+
+
+
+
 
 
 /* 
