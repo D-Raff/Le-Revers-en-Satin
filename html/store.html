@@ -14,7 +14,7 @@
     <title>Our Products</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg m-0 p-0">
+    <nav class="navbar navbar-dark navbar-expand-lg m-0 p-0">
       <div class="container-fluid navbar-fill">
         <a class="brand" href="../index.html">
           <img
@@ -24,6 +24,10 @@
           />
           Le Revers en Satin
         </a>
+
+        <input class="ms-5" type="search" placeholder="Search Our Products" id="searchbar">
+        <a href="#product-section"><button type="button" data-search>search</button></a>
+        
 
         <button
           class="navbar-toggler"
@@ -63,9 +67,31 @@
       </div>
     </nav>
 
-    <main>
+    <main id="store">
       <div class="shop-info">
-        <img src="https://i.postimg.cc/qRX5W7sD/christian-5-UDXM2-SONZk-unsplash.jpg" alt="Shop info background">
+        <img loading="lazy"
+          src="https://i.postimg.cc/p2gMhhpv/christian-5-UDXM2-SONZk-unsplash.jpg"
+          alt="Shop info background"
+        />
+        <div class="container shop-text">
+          <p class="p1">
+            Shop Our range of on-demand products, perfect for when you need the
+            right item to complete your look.
+          </p>
+          <p class="p2">
+            All of our on-demand products are kept to neutral patterns and
+            favoured colors, which gives them the ability to be paired with any
+            outift
+          </p>
+        </div>
+      </div>
+      <div class="products">
+        <!-- <img loading="lazy" src="https://i.postimg.cc/dJNYFSFL/christian-1-C-TWXNRyt-U-unsplash.jpg" alt="product-bg"> -->
+        <table id="product-section" class="container product-wrapper">
+          <ul class="product-list">
+          </ul>
+        </table>
+        </div>
       </div>
     </main>
 
