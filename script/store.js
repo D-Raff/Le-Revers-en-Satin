@@ -13,31 +13,31 @@ let products = JSON.parse(localStorage.getItem("products"))
         {
           name: "Classic Black Tuxedo",
           make: "The Satin Lapel",
-          amount: 5000,
+          price: 5000,
           img: "https://i.postimg.cc/FsWs2rGK/Screenshot_2023-12-02_215612.jpg",
         },
         {
           name: "Satin Lapeled Navy tuxedo",
           make: "The Satin Lapel",
-          amount: 6000,
+          price: 6000,
           img: "https://i.postimg.cc/X7m6fpQ9/Screenshot_2023-12-02_220048.jpg",
         },
         {
           name: "Satin Lapeled Grey Tuxedo",
           make: "The Satin Lapel",
-          amount: 5000,
+          price: 5000,
           img: "https://i.postimg.cc/FzKXZSMV/Screenshot_2023-12-02_220013.jpg",
         },
         {
           name: "Satin Lapel Silver Tuxedo",
           make: "The Satin Lapel",
-          amount: 7000,
+          price: 7000,
           img: "https://i.postimg.cc/yxnY6sHv/Screenshot_2023-12-02_215521.jpg",
         },
         {
           name: " Classic Brown Leather Chlesea Boot",
           make: "The Satin Lapel",
-          amount: 1500,
+          price: 1500,
           img: "https://i.postimg.cc/SSB9vrRP/Screenshot-2023-12-02-213835.jpg",
         },
       ])
@@ -55,7 +55,7 @@ function showProducts() {
                 <div class="card-body">
                 <h5 class="card-text text-center">${product.name}<h5>
                     <p class="card-title text-center">${product.make}</p>
-                    <p class="card-text text-center">R${product.amount}.00</p>
+                    <p class="card-text text-center">R${product.price}.00</p>
                     <button value='${index}' type="button" class="cartBtn">Add to cart</button>
                 </div>
             </div>
@@ -94,7 +94,7 @@ searchProducts.addEventListener("keyup", function () {
             <div class="card-body">
             <h5 class="card-text text-center">${item.name}<h5>
                 <p class="card-title text-center">${item.make}</p>
-                <p class="card-text text-center">R${item.amount}.00</p>
+                <p class="card-text text-center">R${item.price}.00</p>
                 <button value='${index}' type="button" class="cartBtn">Add to cart</button>
             </div>
         </div>
@@ -112,9 +112,9 @@ let sortBtn = document.querySelector('[data-sort]');
 sortBtn.addEventListener("click", ()=>{
     let sorted = products.sort((a, b) =>{
         // put the next item before the current (according to price)
-        if(a.amount < b.amount ) return -1;
+        if(a.price < b.price ) return -1;
         // put the next item after the current (according to price)
-        if(a.amount > b.amount ) return 1;
+        if(a.price > b.price ) return 1;
     });
     productTable.innerHTML = sorted.map(function(item,index){
         return`
@@ -123,7 +123,7 @@ sortBtn.addEventListener("click", ()=>{
             <div class="card-body">
             <h5 class="card-text text-center">${item.name}<h5>
                 <p class="card-title text-center">${item.make}</p>
-                <p class="card-text text-center">R${item.amount}.00</p>
+                <p class="card-text text-center">R${item.price}.00</p>
                 <button value='${index}' type="button" class="cartBtn">Add to cart</button>
             </div>
         </div>
