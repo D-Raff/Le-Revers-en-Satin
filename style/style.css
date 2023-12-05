@@ -70,12 +70,16 @@ img[alt="Store-front"] {
   display: flex;
   flex-direction: column;
   text-shadow: #2f2e2e 3px 3px;
-  animation: Float 2s ease-in-out;
+  animation: Float 1s ease-in-out;
   line-height: 1.5em;
 }
 @keyframes Float {
-  from{line-height: 15em;}
-  to{line-height: 1.5em;}
+  from {
+    line-height: 10em;
+  }
+  to {
+    line-height: 1.5em;
+  }
 }
 .name {
   font-family: "Ephesis", cursive;
@@ -112,26 +116,26 @@ footer {
   justify-content: space-evenly;
 }
 .about-info {
-  border: 3px solid;
+  border: 3px solid #fbe6a2;
   border-radius: 20px;
   text-align: center;
   font-family: "Nanum Myeongjo", serif;
-  font-style:oblique;
+  font-style: oblique;
 }
 .name-3 {
   font-weight: bold;
-  font-family: 'Italiana', sans-serif;
+  font-family: "Italiana", sans-serif;
 }
-.services{
-  border:  3px solid;
+.services {
+  border: 3px solid #fbe6a2;
   border-radius: 20px;
   height: 30em;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.service{
-  border: 3px solid;
+.service {
+  border: 3px solid #fbe6a2;
   width: 30%;
   height: 20em;
   display: flex;
@@ -140,25 +144,84 @@ footer {
   padding: 10px;
   border-radius: 20px;
 }
-.service img{
+.service img {
   height: 50%;
   width: 80%;
   object-fit: cover;
 }
 
 /* shop  */
-.shop-info{
-  border: 3px solid;
+#store {
+  flex-direction: column;
+}
+.shop-info {
+  border-bottom: 3px solid #112f21;
   width: 100%;
   margin: 0;
+  display: flex;
+  justify-content: center;
 }
-img[alt="Shop info background"]{
+img[alt="Shop info background"] {
   width: 100%;
   height: 1000px;
-  object-fit: cover ;
+  object-fit: cover;
   /* backdrop-filter: blur(100%); */
   opacity: 70%;
 }
+.shop-text {
+  color: #fbe6a2;
+  position: absolute;
+  font-family: "Italiana", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+  text-align: center;
+  text-shadow: 2px 2px #112f21;
+  top: 15%;
+}
+.p1 {
+  font-size: 4em;
+}
+.p2 {
+  font-size: 3em;
+}
+.products {
+  background-image: url(https://i.postimg.cc/dJNYFSFL/christian-1-C-TWXNRyt-U-unsplash.jpg);
+
+  background-size: cover;
+  width: 100%;
+  min-height: 200vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* img[alt="product-bg"]{
+  width: 100%;
+  min-height: 100vh;
+  object-fit: cover;
+} */
+.product-wrapper {
+  position: absolute;
+  border: 3px solid #112f21;
+  border-radius: 30px;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  background: #112f21;
+  opacity: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
