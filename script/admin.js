@@ -2,6 +2,13 @@
 // creating a variable for the array to be saved into local storage
 let products = [];
 
+// localStorage.setItem("products", JSON.stringify(products));
+
+//   updating the products array with the one stored in localstorage
+products = JSON.parse(localStorage.getItem("products"));
+
+let productDisplay = document.querySelector("[data-product-list]");
+
 // using a constructor function to create new objects
 function Product(name, make, description, price, img) {
   (this.name = name),
@@ -10,6 +17,27 @@ function Product(name, make, description, price, img) {
     (this.price = price),
     (this.img = img);
 }
+
+// creating a function to disply the items in the current array
+function display() {
+  let allProducts = products.map(function (item,index) {
+    return `
+    <tr>
+    <td><img style="height: 300px;" src = "${item.url}"></td>
+    <td>${item.name}</td>
+    <td>${item.make}</td>
+    <td>${item.description}</td>
+    <td>${item.price}</td>
+    <td><button class = "edit" value = '${index}' data-edit>edit</button></td>
+    <td><button class = "delete" value = '${index}' data-delete>delete</button></td>
+    </tr>
+    `
+  })
+
+  productDisplay.innerHTML = allProducts.join("");
+}
+// calling the display function to display all items
+display();
 
 // creating a button to add products into the products array
 let btnAddItem = document.querySelector("[data-save-prod]");
@@ -28,9 +56,37 @@ btnAddItem.addEventListener("click", () => {
     Price.value,
     Img.value
   );
-//   adding the product into our local storage array
-  products.push(newProduct)
+  //   adding the product into our local storage array
+  products.push(newProduct);
 
-localStorage.setItem("products", JSON.stringify(products))
+  //   storing the data we pushed into the array in the local storage
+  localStorage.setItem("products", JSON.stringify(products));
 
+  //   updating the products array with the one stored in localstorage
+  products = JSON.parse(localStorage.getItem("products"));
+  display()
 });
+
+// display the items again after one was deleted
+function update() {
+  // updating the local storage with the current items in the array
+  localStorage.setItem("products", JSON.stringify(products));
+  // then updating the current array with items added to the localstorage
+  products = JSON.parse(localStorage.getItem("products"));
+}
+
+function removeItem(position) {
+  // removing the item from the array
+  products.splice(position, 1);
+  // updating the array in localstorage
+  update(); // updating the array
+  display(); //displaying all items again
+}
+
+// creating a variable for the created delete buttons
+// let deleteBtn = document.querySelector("[data-delete]");
+
+// deleteBtn.addEventListener("click", function () {
+//   removeItem(deleteBtn.value, display());
+//   alert("button pressed");
+// });
