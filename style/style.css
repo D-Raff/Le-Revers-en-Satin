@@ -256,6 +256,7 @@ img[alt="Shop info background"] {
   flex-direction: column;
   font-family: "Bodoni Moda", serif;
   gap: 2em;
+  padding-block: 20px;
 }
 .admin-btn {
   width: fit-content;
@@ -269,14 +270,12 @@ img[alt="Shop info background"] {
   background: #fbe6a2 !important;
   position: relative;
 }
-
 .admin-products {
   border-radius: 20px;
   min-height: 50vh;
   background: #fbe6a2;
   color: #112f21;
 }
-
 .modal-body {
   background: #112f21;
   display: flex;
@@ -292,6 +291,12 @@ img[alt="Shop info background"] {
 :is([data-bs-dismiss], [data-save-prod]) {
   border: 3px solid #112f21 !important;
 }
+[data-prod-img]{
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+}
+
 
 /* checkout styling */
 #Checkout {
