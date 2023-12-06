@@ -23,7 +23,7 @@ function display() {
   let allProducts = products.map(function (item,index) {
     return `
     <tr>
-    <td><img style="height: 300px;" src = "${item.url}"></td>
+    <td><img style="height: 300px;" src=${item.img}></td>
     <td>${item.name}</td>
     <td>${item.make}</td>
     <td>${item.description}</td>
