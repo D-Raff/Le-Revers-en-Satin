@@ -79,7 +79,7 @@ let searchProducts = document.querySelector("[data-search]");
 
 searchProducts.addEventListener("keyup", function () {
   try {
-    let searchItem = products.filter((prod) => {
+    let searchItem = products.filter(prod => {
       return prod.name
         .toLowerCase()
         .includes(searchProducts.value.toLowerCase());

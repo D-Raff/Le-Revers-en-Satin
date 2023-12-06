@@ -254,12 +254,12 @@ img[alt="Shop info background"] {
   display: flex;
   flex-direction: column;
   font-family: 'Bodoni Moda', serif;
+  gap: 2em;
 }
 .admin-btn{
   width: fit-content;
   display: flex;
   position: relative;
-  left: 15.6%;
 }
 [data-add-prod]{
   border-radius: 20px;
@@ -267,18 +267,29 @@ img[alt="Shop info background"] {
   color: #112f21;
   background: #fbe6a2 !important;
   position: relative;
-  left: 15.8%;
 }
 
 .admin-products{
-  border: 3px solid black;
-  border-top-left-radius: 0 !important;
   border-radius: 20px;
   min-height: 50vh;
   background: #fbe6a2;
 }
 
-
+.modal-body{
+  background: #112f21;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.modal-body input{
+  border: 2px solid #fbe6a2;
+}
+:is(.modal-footer,.modal-header){
+  background: #fbe6a2 !important;
+}
+:is([data-bs-dismiss],[data-save-prod]){
+  border: 3px solid #112f21 !important;
+}
 
 
 
