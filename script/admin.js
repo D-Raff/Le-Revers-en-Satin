@@ -23,7 +23,7 @@ function display() {
   let allProducts = products.map(function (item,index) {
     return `
     <tr>
-    <td><img style="height: 300px;" src=${item.img}></td>
+    <td><img data-prod-img style="height: 300px;" src=${item.img}></td>
     <td>${item.name}</td>
     <td>${item.make}</td>
     <td>${item.description}</td>
@@ -84,9 +84,8 @@ function removeItem(position) {
 }
 
 // creating a variable for the created delete buttons
-// let deleteBtn = document.querySelector("[data-delete]");
+let deleteBtn = document.querySelector("[data-delete]");
 
-// deleteBtn.addEventListener("click", function () {
-//   removeItem(deleteBtn.value, display());
-//   alert("button pressed");
-// });
+deleteBtn.addEventListener("click", function () {
+  removeItem(deleteBtn.value,);
+});
