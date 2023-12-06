@@ -205,16 +205,16 @@ img[alt="Shop info background"] {
   backdrop-filter: blur(2px);
   color: #fbe6a2;
   width: 100%;
-  font-family: 'Bodoni Moda', serif;
+  font-family: "Bodoni Moda", serif;
   font-weight: 800;
 }
-.ctrl-btns{
+.ctrl-btns {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  font-family: 'Bodoni Moda', serif;
+  font-family: "Bodoni Moda", serif;
 }
-:is(.Sort){
+:is(.Sort) {
   border-radius: 30px;
   border: none;
   width: 6em;
@@ -223,45 +223,45 @@ img[alt="Shop info background"] {
   background: #112f21;
   color: #fbe6a2;
 }
-.prod-card{
+.prod-card {
   height: 500px;
   background: #fbe6a2;
   color: #112f21;
   width: 18em;
   border-radius: 20px;
-  border:2px solid #fbe6a2;
+  border: 2px solid #fbe6a2;
 }
-.prod-card img{
+.prod-card img {
   width: 100%;
   height: 300px;
   object-fit: cover;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
 }
-.cartBtn{
+.cartBtn {
   width: 8em;
   color: #fbe6a2;
-  background: #112f21; 
+  background: #112f21;
   border: none;
   border-radius: 10px;
   box-shadow: 2px 2px black;
 }
 
 /* Admin page styling */
-#Admin{
+#Admin {
   min-height: 100vh;
   background: #112f21;
   display: flex;
   flex-direction: column;
-  font-family: 'Bodoni Moda', serif;
+  font-family: "Bodoni Moda", serif;
   gap: 2em;
 }
-.admin-btn{
+.admin-btn {
   width: fit-content;
   display: flex;
   position: relative;
 }
-[data-add-prod]{
+[data-add-prod] {
   border-radius: 20px;
   width: 8em;
   color: #112f21;
@@ -269,33 +269,37 @@ img[alt="Shop info background"] {
   position: relative;
 }
 
-.admin-products{
+.admin-products {
   border-radius: 20px;
   min-height: 50vh;
   background: #fbe6a2;
   color: #112f21;
 }
 
-.modal-body{
+.modal-body {
   background: #112f21;
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
 }
-.modal-body input{
+.modal-body input {
   border: 2px solid #fbe6a2;
 }
-:is(.modal-footer,.modal-header){
+:is(.modal-footer, .modal-header) {
   background: #fbe6a2 !important;
 }
-:is([data-bs-dismiss],[data-save-prod]){
+:is([data-bs-dismiss], [data-save-prod]) {
   border: 3px solid #112f21 !important;
 }
 
-
-
-
-
+/* checkout styling */
+#Checkout {
+  min-height: 100vh;
+  background: #112f21;
+  display: flex;
+  flex-direction: column;
+  font-family: "Bodoni Moda", serif;
+}
 
 /* 
 
