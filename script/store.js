@@ -14,49 +14,49 @@ localStorage.setItem('products', JSON.stringify(
         "make": "The Satin Lapel",
         "description": "A full classic tuxedo, complete with shirt, bowtie, pants and shoe style of your choice",
         "price": 5000,
-        "img": "https://i.postimg.cc/28QgBc5r/ed929619-a18f-484e-9543-6b401a5df5c5.jpg",
+        "img": "https://i.postimg.cc/TfGL5hDn/Screenshot-2023-12-02-215612.jpg",
     },
     {
         "name": "satin lapeled navy tux",
         "make": "The Satin Lapel",
         "description": "A full navy tuxedo with custom satin lapels, complete with shirt, bowtie/tie, pants and shoe style of your choice",
         "price": 6000,
-        "img": "https://i.postimg.cc/MKnv6BZ7/97222de9-ff18-487e-a3d4-6b67901dc366.jpg",
+        "img": "https://i.postimg.cc/JM47WXXY/Screenshot-2023-12-02-220048.jpg",
     },
     {
         "name": "satin lapeled grey tux",
         "make": "The Satin Lapel",
         "description": "A full grey tuxedo with custom satin lapels, complete with shirt, bowtie/tie, pants and shoe style of your choice",
         "price": 5000,
-        "img": "https://i.postimg.cc/v830RJD1/bd5b3354-1884-4590-8e35-a38694c0802c.jpg",
+        "img": "https://i.postimg.cc/fzcWMj5p/Screenshot-2023-12-02-220013.jpg",
     },
     {
         "name": "satin lapeled silver tux",
         "make": "The Satin Lapel",
         "description": "A full silver tuxedo with custom satin lapels, complete with shirt, bowtie, pants and shoe style of your choice",
         "price": 7000,
-        "img": "https://i.postimg.cc/gcXDxNDj/a6d62e2e-beef-45fb-a1cf-cd0f4a3913c3.jpg",
+        "img": "https://i.postimg.cc/yxnY6sHv/Screenshot-2023-12-02-215521.jpg",
     },
     {
         "name": "Classic chelsea boot",
         "make": "The Satin Lapel",
         "description": "The classic chelsea boot, good fit with most outfits. Available in a color of your choosing, with suede material options",
         "price": 1500,
-        "img": "https://i.postimg.cc/7LWRZvwr/photo-1607006411601-775c8cc632dc-blend-000000-blend-alpha-10-blend-mode-normal-blend-w-1-crop-faces.jpg",
+        "img": "https://i.postimg.cc/SSB9vrRP/Screenshot-2023-12-02-213835.jpg",
     },
     {
         "name": "leather oxford shoes",
         "make": "The Satin Lapel",
         "description": "The Oxford shoe, perfect for formal occasions and events. Available in black or brown leather",
         "price": 1200,
-        "img": "https://i.postimg.cc/CxRZBsXn/s-l1200.jpg",
+        "img": "https://i.postimg.cc/YMwgNbJG/Screenshot-2023-12-02-214225.jpg",
     },
     {
         "name": "Air-King",
         "make": "Rolex",
-        "description": "",
+        "description": "A gentleman's classic. The beautiful black metal rendition of style and class",
         "price": 50000,
-        "img": "https://i.postimg.cc/PT7KKXQh/7-cc45b47e-d917-45c5-8957-387f24ad8c3d-1080x.jpg",
+        "img": "https://i.postimg.cc/gzYQ6Vmf/domino-p2-WUEFGr-Ad-A-unsplash.jpg",
     },
     
 ]
@@ -69,14 +69,16 @@ function showProducts() {
     products.forEach((product,index) => {
       // Add product HTML to the productTable
       productTable.innerHTML += `
-            <div class=" my-3 mx-3 prod-card">
+            <div class="card my-3 mx-3 prod-card">
             <img src="${product.img}" class=" card-img-top">
                 <div class="card-body">
                 <h5 class="card-text text-center">${product.name}<h5>
                     <p class="card-title text-center">${product.make}</p>
+                    <p class="card-title text-center">${product.description}</p>
                     <p class="card-text text-center">R${product.price}.00</p>
-                    <button data-toCart value='${index}' type="button" class="cartBtn">Add to cart</button>
-                </div>
+                    </div>
+                    
+                    <div class="card-footer"><button data-toCart value='${index}' type="button" class="cartBtn">Add to cart</button></div>
             </div>
             `;
     });
@@ -120,14 +122,16 @@ searchProducts.addEventListener("keyup", function () {
       productTable.innerHTML = "";
       searchItem.forEach((item, index) => {
         productTable.innerHTML += `
-        <div class=" my-3 mx-3 prod-card">
+        <div class="card my-3 mx-3 prod-card">
         <img src="${item.img}" class=" card-img-top">
             <div class="card-body">
             <h5 class="card-text text-center">${item.name}<h5>
                 <p class="card-title text-center">${item.make}</p>
+                <p class="card-title text-center">${item.description}</p>
                 <p class="card-text text-center">R${item.price}.00</p>
-                <button value='${index}' type="button" class="cartBtn">Add to cart</button>
+                
             </div>
+            <div class="card-footer"><button value='${index}' type="button" class="cartBtn">Add to cart</button></div>
         </div>
         `;
       });

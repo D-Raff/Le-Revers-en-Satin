@@ -83,9 +83,10 @@ function removeItem(position) {
   display(); //displaying all items again
 }
 
-// creating a variable for the created delete buttons
-let deleteBtn = document.querySelector("[data-delete]");
-
-deleteBtn.addEventListener("click", function () {
-  removeItem(deleteBtn.value,);
+cartDisplay.addEventListener("click", function () {
+  if (event.target.classList.contains("delete")) {
+    // refer to the button again. the button now becomes the event.target
+    // parse the button in the remove function
+    removeItem(event.target.value, display());
+  }
 });
