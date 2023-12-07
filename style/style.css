@@ -335,6 +335,16 @@ img[alt="Shop info background"] {
   background-color: #fbe6a2;
   padding: 3px;
 }
+[data-total]{
+  width: 80px;
+  background: transparent;
+  border: none;
+  color: #fbe6a2;
+}
+[data-nothing]{
+  border: 3px solid #fbe6a2;
+  height: 200px;
+}
 
 /* 
 
