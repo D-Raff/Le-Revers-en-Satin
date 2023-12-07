@@ -307,6 +307,7 @@ img[alt="Shop info background"] {
   justify-content: center;
   align-items: center;
   padding: 20px;
+  gap: 2em;
 }
 [data-cart-list]{
   background-color: #fbe6a2;
@@ -328,7 +329,12 @@ img[alt="Shop info background"] {
   background-color: #112f21;
   margin: 2px;
 }
-
+[data-clear]{
+  border-radius: 10px;
+  border: none;
+  background-color: #fbe6a2;
+  padding: 3px;
+}
 
 /* 
 

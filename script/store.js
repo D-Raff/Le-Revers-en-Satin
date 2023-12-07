@@ -1,6 +1,6 @@
 // store js
 // creating an empty array for the cart
-let cart = [];
+let cart = JSON.parse(localStorage.getItem('cart')) ? JSON.parse(localStorage.getItem('cart')) : [];
 
 // creating a variable for the product table to add items to
 let productTable = document.querySelector("[data-products]");
