@@ -134,6 +134,7 @@ searchProducts.addEventListener("keyup", function () {
             <div class="card-footer"><button value='${index}' type="button" class="cartBtn">Add to cart</button></div>
         </div>
         `;
+        
       });
     } else {
       productTable.innerHTML = `<h2 class="text-center">${searchProducts.value} was not found</h2>`;

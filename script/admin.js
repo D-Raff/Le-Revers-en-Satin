@@ -29,7 +29,7 @@ function display() {
     <td>${item.description}</td>
     <td>${item.price}</td>
     <td><button class = "edit" value = '${index}' data-edit>edit</button></td>
-    <td><button class = "delete" value = '${index}' data-delete>delete</button></td>
+    <td><button class="delete" value = '${index}' data-delete>delete</button></td>
     </tr>
     `
   })
@@ -83,7 +83,7 @@ function removeItem(position) {
   display(); //displaying all items again
 }
 
-cartDisplay.addEventListener("click", function () {
+productDisplay.addEventListener("click", function () {
   if (event.target.classList.contains("delete")) {
     // refer to the button again. the button now becomes the event.target
     // parse the button in the remove function
