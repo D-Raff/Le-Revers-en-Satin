@@ -1,52 +1,46 @@
-// checkout js
-let cart = JSON.parse(localStorage.getItem("cart"));
+let cart = JSON.parse(localStorage.getItem('cart'))
 
-let cartDisplay = document.querySelector('[data-cart-list]')
+let cartItems = Object.groupBy(cart, item=> item.name)
 
-let cartBtns = document.querySelector('[data-cartBtns]')
+let cartDisplay = document.querySelector("[data-cart-list]");
 
+let noItems = document.querySelector('[data-nothing]')
 
-function display() {
-  let cartProducts = cart.map(function (item, index) {
-    return `
-      <tr>
-      <td><img data-cart-img style="height: 300px;" src = "${item.img}"></td>
-      <td>${item.name}</td>
-      <td>${item.make}</td>
-      <td>${item.description}</td>
-      <td>${item.price}</td>
-      <td><button class = "edit" value = '${index}' data-edit>edit</button></td>
-      <td><button class = "delete" value = '${index}' data-delete>delete</button></td>
-      </tr>
-      `;
-  });
-  cartDisplay.innerHTML = cartProducts.join("");
+let cartTotal = document.querySelector("[data-total]");
+
+let totalPrice = 0
+
+function displaycart(){
+    cartDisplay.innerHTML = ''
+    if(cartItems){
+        for(let i in cartItems){
+          let itemPrices = cartItems[i][0].price * cartItems[i].length
+            cartDisplay.innerHTML += `
+              <tr class="prod-row">
+                <td class="w-25" id="tableSpacing"><img src="${cartItems[i][0].img}" data-cart-img></td>
+                <td id="tableSpacing">${cartItems[i][0].name}</td>
+                <td id="tableSpacing">${cartItems[i][0].description}</td>
+                <td id="tableSpacing">${cartItems[i].length}</td>
+                <td id="tableSpacing">R${itemPrices}</td>
+              </tr>
+            `
+            totalPrice += +cartItems[i][0].price * cartItems[i].length;
+          }
+          cartTotal.value = totalPrice
+    }else{
+    noItems.innerHTML = `<div class="text-center">
+    <div class="spinner-border" role="status">
+      <span class="sr-only"></span>
+    </div>
+  </div>`
+    }
 }
-// calling the display function to display all items
-display();
+displaycart()
 
-function update() {
-  // updating the local storage with the current items in the array
-  localStorage.setItem("cart", JSON.stringify(cart));
-  // then updating the current array with items added to the localstorage
-  products = JSON.parse(localStorage.getItem("cart"));
-}
 
-function removeItem(position) {
-  // removing the item from the array
-  cart.splice(position, 1);
-  console.log(cart);
-  // updating the array in localstorage
-  update(); // updating the array
-  display(); //displaying all items
-}
+let clearBtn = document.querySelector('[data-clear]')
 
-cartDisplay.addEventListener("click", function () {
-  if (event.target.classList.contains("delete")) {
-    // refer to the button again. the button now becomes the event.target
-    // parse the button in the remove function
-    removeItem(event.target.value, display());
-    // get the value of the button
-    //alert(event.target.value) // we will get an alert of the index of the button
-  }
-});
+clearBtn.addEventListener('click', function () {
+  localStorage.removeItem('cart')
+  displaycart()
+})
