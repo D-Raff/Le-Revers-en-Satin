@@ -41,6 +41,7 @@ img[alt="logo"] {
 .navbar {
   font-family: "Bodoni Moda", serif;
   position: absolute;
+  z-index: 1;
 }
 .container-fluid.navbar-fill {
   display: flex;
@@ -107,7 +108,7 @@ footer {
 
 /* About page */
 #About {
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   background: #112f21;
   display: flex;
@@ -138,7 +139,7 @@ footer {
 .service {
   border: 3px solid #fbe6a2;
   width: 30%;
-  height: 20em;
+  min-height: 20em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -196,7 +197,6 @@ img[alt="Shop info background"] {
   justify-content: center;
   align-items: center;
 }
-
 .product-wrapper {
   border-radius: 30px;
   min-height: 100vh;
@@ -244,6 +244,10 @@ img[alt="Shop info background"] {
   border: none;
   border-radius: 10px;
   box-shadow: 2px 2px black;
+}
+[data-search]{
+  border-radius: 20px;
+  border-color: #112f21;
 }
 
 /* Admin page styling */
@@ -313,7 +317,7 @@ img[alt="Shop info background"] {
 }
 [data-cart-list]{
   background-color: #fbe6a2;
-  border-radius: 30px;
+  border-radius: 20px;
   color: #112f21;
 }
 [data-cart-img]{
@@ -331,7 +335,7 @@ img[alt="Shop info background"] {
   background-color: #112f21;
   margin: 2px;
 }
-[data-clear]{
+:is([data-clear],[data-purchase]){
   border-radius: 10px;
   border: none;
   background-color: #fbe6a2;
@@ -344,16 +348,11 @@ img[alt="Shop info background"] {
   color: #fbe6a2;
 }
 [data-nothing]{
-  border: 3px solid #fbe6a2;
   height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-.prod-row {
-  border: 10px solid #fbe6a2;
-  border-radius: 20px ;
 }
 
 
@@ -379,7 +378,7 @@ img[alt="Shop info background"] {
   gap: 5px;
 }
 .contact-card{
-  height: 300px !important;
+  min-height: 300px !important;
   background: #2f2e2e !important;
   color: #fbe6a2 !important;
   border-radius: 20px !important;
@@ -402,6 +401,54 @@ img[alt="Shop info background"] {
   border-radius: 30px;
 }
 
+
+
+
+
+
+
+
+@media screen and (min-width:290px) and (max-width:960px) {
+  .welcome-text{
+    top: 6.2em;
+    font-size: 2em;
+  }
+  .name{
+    font-size: 3rem;
+  }
+  #home{
+    height: 100vh;
+  }
+  .service{
+    font-size: .7em;
+  }
+  :is(.p1, .p2){
+    font-size: 2em;
+  }
+  .headings{
+    display: none;
+  }
+  .prod-row{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .checkout-img{
+    position: relative;
+    right: 50px;
+  }
+  .cell{
+    border-bottom: 2px solid #112f21;
+  }
+  .card-group{
+    display: flex;
+    flex-direction: column;
+  }
+  .contactForm{
+    width: 100% !important;
+  }
+}
 /* 
 
 || main font
@@ -416,3 +463,6 @@ font-family: 'Italiana', sans-serif;
 || main heading fonts
 font-family: 'Nanum Myeongjo', serif;
 */
+td{
+  padding-right: 20px;
+}

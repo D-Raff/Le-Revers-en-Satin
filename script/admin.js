@@ -20,7 +20,7 @@ function Product(name, make, description, price, img) {
 function display() {
   let allProducts = products.map(function (item, index) {
     return `
-    <tr>
+    <tr class="prod-row">
     <td><img data-prod-img style="height: 300px;" src=${item.img}></td>
     <td>${item.name}</td>
     <td>${item.make}</td>
@@ -137,7 +137,6 @@ document.querySelector("[data-saveEdited-prod]").addEventListener(
   saveChanges,
   update,
   display
-  // event.location.reload()
 );
 
 let sortBtn = document.querySelector("[data-sort-prod]");
@@ -148,7 +147,7 @@ sortBtn.addEventListener("click", () => {
     // put the next item after the current (according to price)
     if (a.price > b.price) return 1;
   });
-  productTable.innerHTML = sorted
+  productDisplay.innerHTML = sorted
     .map(function (item, index) {
       return `
         <tr>
