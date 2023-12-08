@@ -89,17 +89,18 @@
         </div>
       </div>
     </div>
-
-    <form class="container contactForm" action="https://formspree.io/f/mvojerne" method="POST">
+    
+    <form class="container contactForm" target="_blank" action="https://formspree.io/f/mvojerne" method="POST">
+      <p>Have a custom request? Reach out to us and provide your details along with a way to contact you</p>
       <label>
         Your email:
-        <input type="email" name="email">
+        <input type="email" data-mail name="email">
       </label>
       <label>
         Your message:
-        <textarea name="message"></textarea>
+        <textarea data-message name="message"></textarea>
       </label>
-      <button type="submit">Send</button>
+      <button data-submit type="submit" onclick="postMessage()">Send</button>
     </form>
   </main>
 

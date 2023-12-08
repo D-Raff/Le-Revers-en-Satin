@@ -52,16 +52,25 @@
   <main id="Checkout">
     <div class="container" data-nothing>
     </div>
-    <table class="container cart-products" data-cart-list></table>
+    <table class="container cart-products" data-cart-list>
+      <tr class="headings">
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col">Description</th>
+        <th scope="col">Qnty</th>
+        <th scope="col">Price</th>
+      </tr>
+    </table>
     <div class="container d-flex justify-content-between data-cartBtns">
       <button data-clear>Clear cart</button>
+      <button data-Purchase>Purchase</button>
       <div><label id="total" for="total">Total:</label>
-      <input name="total" type="text" data-total></div>
+        <input name="total" type="text" data-total></div>
     </div>
   </main>
-  
-  
-  
+
+
+
 
   <footer class="container-fluid">
     <span data-date></span>&copy; <span class="name-2">Le Revers en Satin</span>
