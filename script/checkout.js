@@ -12,7 +12,8 @@ let totalPrice = 0
 
 function displaycart() {
   cartDisplay.innerHTML = ''
-  if (cartItems) {
+  try {
+    if (cartItems) {
     for (let i in cartItems) {
       let itemPrices = cartItems[i][0].price * cartItems[i].length
       cartDisplay.innerHTML += `
@@ -28,9 +29,10 @@ function displaycart() {
     }
     cartTotal.value = `R${totalPrice}`
   } 
-  else {
-    noItems.innerHTML = `why wont this kak work`
+  } catch (e) {
+    alert(e)
   }
+  
 }
 displaycart()
 
