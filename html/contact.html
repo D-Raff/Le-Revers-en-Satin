@@ -1,39 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- styling (css and bootstrap) -->
-    <link rel="stylesheet" href="../style/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <title>Reach us</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- styling (css and bootstrap) -->
+  <link rel="stylesheet" href="../style/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+  <title>Reach us</title>
 </head>
+
 <body>
   <nav class="navbar navbar-dark navbar-expand-lg m-0 p-0">
     <div class="container-fluid navbar-fill">
       <a class="brand" href="../index.html">
         <img loading="lazy"
-        src="https://i.postimg.cc/L63DB79R/prom-tuxedo-bride-silhouette-clip-art-tuxedo-76310c97a6b67ef1f9a7bec82685d6fd.png"
-        alt="logo"> Le Revers en Satin
+          src="https://i.postimg.cc/L63DB79R/prom-tuxedo-bride-silhouette-clip-art-tuxedo-76310c97a6b67ef1f9a7bec82685d6fd.png"
+          alt="logo"> Le Revers en Satin
       </a>
 
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNavDropdown"
-        aria-controls="navbarNavDropdown"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="../index.html"
-              >Home</a
-            >
+            <a class="nav-link" aria-current="page" href="../index.html">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="./About.html">About</a>
@@ -54,19 +49,72 @@
       </div>
     </div>
   </nav>
-  
-      <main>
-      </main>
-  
-      <footer class="container-fluid">
-          <span data-date></span>&copy; <span class="name-2">Le Revers en Satin</span>
-      </footer> 
+
+  <main id="ContactMe">
+    <div class="container card-group">
+      <div class="card contact-card">
+        <div class="icon-contact"><i class="bi bi-telephone"></i></div>
+        <div class="card-body">
+          <h5 class="card-title">CALL US</h5>
+          <p class="card-text">Owner: Damon Raffels 0827881888</p>
+          <p class="card-text">stylists: <span>Carl James 0820101010</span>
+            <span>Razeen Mckenzie 0820202020</span>
+          </p>
+          <p class="card-text">Photographer: Matthew Swain 0823030303</p>
+          <p class="card-text">Tailor: Rezaar Osman 0824040404</p>
+        </div>
+      </div>
+      <div class="card contact-card">
+        <div class="icon-contact"><i class="bi bi-envelope"></i></div>
+        <div class="card-body">
+          <h5 class="card-title">MAIL US</h5>
+          <p class="card-text">TheSatinLapel@gmail.com
+            <span>damonraffels@gmail.com</span>
+          </p>
+        </div>
+      </div>
+      <div class="card contact-card">
+        <div class="icon-contact">
+          <i class="bi bi-instagram"></i>
+          <i class="bi bi-facebook"></i>
+          <i class="bi bi-tiktok"></i>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">CHECK OUR SOCIALS</h5>
+          <p class="card-text">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">TikTok</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <form class="container contactForm" action="https://formspree.io/f/mvojerne" method="POST">
+      <label>
+        Your email:
+        <input type="email" name="email">
+      </label>
+      <label>
+        Your message:
+        <textarea name="message"></textarea>
+      </label>
+      <button type="submit">Send</button>
+    </form>
+  </main>
+
+  <footer class="container-fluid">
+    <span data-date></span>&copy; <span class="name-2">Le Revers en Satin</span>
+  </footer>
 
 
 
 
-    <!-- linking scripts and bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src="../script/code.js"></script>
+  <!-- linking scripts and bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+  </script>
+  <script src="../script/code.js"></script>
 </body>
+
 </html>

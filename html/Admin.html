@@ -55,6 +55,9 @@
       <button type="button" class="btn" data-add-prod data-bs-toggle="modal" data-bs-target="#productAdder">
         Add Product
       </button>
+      <button type="button" class="btn" data-sort-prod>
+        Sort Items
+      </button>
     </div>
 
     <div class="modal fade" id="productAdder" tabindex="-1" aria-labelledby="addProduct" aria-hidden="true">
@@ -74,18 +77,50 @@
             <input placeholder="Provide image url" type="text" data-img>
           </div>
           <div class="modal-footer modal-bot">
-            <button type="button" class="btn" data-bs-dismiss="modal">
-              Close
-            </button>
-            <button data-save-prod type="button" class="btn">
+            <form>
+              <button data-save-prod type="submit" class="btn">
               Save Product
             </button>
+            </form>            
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="modal fade" id="productEdit" tabindex="-1" aria-labelledby="editProduct" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="editProduct">
+              Edit Product details
+            </h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <input placeholder="Enter product name" type="text" data-edit-name>
+            <input placeholder="Enter brand name" type="text" data-edit-make>
+            <input placeholder="Enter product description" type="text" data-edit-description>
+            <input placeholder="Enter product price" type="number" data-edit-price>
+            <input placeholder="Provide image url" type="text" data-edit-img>
+          </div>
+          <div class="modal-footer modal-bot">
+            <form>
+              <button data-saveEdited-prod type="submit" class="btn">
+                Save Edited Information
+              </button>
+            </form>
           </div>
         </div>
       </div>
     </div>
     <table class="container admin-products" data-product-list>
-      
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col">Brand</th>
+        <th scope="col">Description</th>
+        <th scope="col">Price</th>
+      </tr>
     </table>
   </main>
 
