@@ -261,7 +261,7 @@ img[alt="Shop info background"] {
   display: flex;
   position: relative;
 }
-[data-add-prod] {
+:is([data-add-prod],[data-sort-prod]) {
   border-radius: 20px;
   width: 8em;
   color: #112f21;
@@ -293,6 +293,8 @@ img[alt="Shop info background"] {
   width: 200px;
   height: 300px;
   object-fit: cover;
+  border-radius: 20px;
+  padding: 10px;
 }
 
 
@@ -344,6 +346,60 @@ img[alt="Shop info background"] {
 [data-nothing]{
   border: 3px solid #fbe6a2;
   height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.prod-row {
+  border: 10px solid #fbe6a2;
+  border-radius: 20px ;
+}
+
+
+/* contact page */
+#ContactMe{
+  min-height: 100vh;
+  background: #112f21;
+  font-family: 'Bodoni Moda', serif;
+  font-size: 100%;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(https://i.postimg.cc/vQ53hc0b/man-in-beige-colored-casual-formal-suit-and-brogue-upscaled-1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  gap: 1em;
+  padding: 2em;
+}
+.card-group{
+  display: flex;
+  gap: 5px;
+}
+.contact-card{
+  height: 300px !important;
+  background: #2f2e2e !important;
+  color: #fbe6a2 !important;
+  border-radius: 20px !important;
+}
+.contactForm{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 300px !important;
+  background: #2f2e2e;
+  color: #fbe6a2;
+  padding: 20px;
+  height: 400px;
+  border-radius: 20px;
+}
+.contactForm button{
+  width: 90px;
+  height: 30px;
+  border-radius: 30px;
 }
 
 /* 
