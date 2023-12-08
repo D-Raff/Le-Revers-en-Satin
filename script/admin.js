@@ -90,3 +90,6 @@ productDisplay.addEventListener("click", function () {
     removeItem(event.target.value, display());
   }
 });
+
+
+// editing items
